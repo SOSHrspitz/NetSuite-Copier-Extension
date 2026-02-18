@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "NetSuite Option Copier",
+  "version": "1.0",
+  "description": "Built for NetSuite, allows for easy coping of options for a line item.",
+ "permissions": ["activeTab", "scripting", "storage", "alarms"], 
+ "content_scripts": [
+    {
+      "matches": ["https://*.app.netsuite.com/core/pages/options.nl?*"],
+      "js": ["content.js"]
+    }
+  ],
+    "background": {
+    "service_worker": "background.js"
+  }
+}
